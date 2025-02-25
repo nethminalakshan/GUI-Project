@@ -1,0 +1,104 @@
+/* Base styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(to bottom, #4b79a1, #283e51);
+    color: white;
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Animation initial state */
+.hero-text {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Animation class */
+.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.subheading {
+    font-size: 1.2rem;
+    color: #ffcc00;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.main-heading {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+}
+
+/* Footer Image */
+.footer-image {
+    position: relative;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.footer-image img {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    opacity: 0.6;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .hero {
+        padding: 60px 15px;
+    }
+    .main-heading {
+        font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 40px 10px;
+    }
+    .subheading {
+        font-size: 1rem;
+    }
+    .main-heading {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 30px 5px;
+    }
+    .subheading {
+        font-size: 0.9rem;
+    }
+    .main-heading {
+        font-size: 1.8rem;
+    }
+}

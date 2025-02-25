@@ -1,0 +1,138 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.headerbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.headerbar img.logo {
+    height: 50px;
+}
+
+.headerbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.headerbar li {
+    margin-left: 20px;
+}
+
+.headerbar a {
+    text-decoration: none;
+    color: #333;
+}
+
+.para1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.para1-1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.para1-2 {
+    font-size: 18px;
+    color: #666;
+}
+
+.slider {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px 0;
+}
+
+.slider span {
+    min-width: 100px;
+    margin-right: 20px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.reservation-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+.reservation-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.dis1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.partners {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.partners img {
+    height: 70px;
+    margin: 0 10px;
+}
+
+.payments {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer .tab {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.footer th {
+    text-align: left;
+}
+
+.footer p {
+    margin: 0;
+}

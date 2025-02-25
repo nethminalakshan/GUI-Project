@@ -1,0 +1,68 @@
+
+body {
+    background-color: #fffbe0; /* Soft gold-tinted background */
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+/* Services Section */
+.services-section {
+    position: relative;
+    top:-400px;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Section Title */
+.services-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: black; /* Changed to Black */
+    margin-bottom: 80px;
+}
+
+/* Service Grid */
+.services-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Service Card */
+.service-card {
+    /* background: linear-gradient(to bottom, #e0e0e0, #c0c0c0);  */
+    padding: 25px;
+    border-radius: 35px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    max-width: 280px;
+}
+
+/* Service Card - Hover Effect */
+.service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Service Images */
+.service-card img {
+    max-width: 120px;
+    margin-bottom: 15px;
+}
+
+/* Service Title */
+.service-card h3 {
+    font-size: 22px;
+    font-weight: bold;
+    color: black; /* Changed to Black */
+    margin-bottom: 10px;
+}
+
+/* Service Description */
+.service-card p {
+    font-size: 15px;
+    color: black; /* Changed to Black */
+    opacity: 0.9;
+    line-height: 1.6;
+}

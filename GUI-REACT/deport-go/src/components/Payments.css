@@ -1,0 +1,42 @@
+
+/* Payments Section */
+.payments {
+    position: relative;
+    top:600px;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Section Title */
+.payments-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: black; /* Changed to Black */
+    margin-bottom: 30px;
+}
+
+/* Payment Logos Container */
+.payments-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Ensures proper spacing */
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+/* Payment Logos */
+.payments-container img {
+    height: 90px;
+    padding: 10px;
+    
+    
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.payments-container img:hover {
+    transform: scale(1.2);
+    
+}

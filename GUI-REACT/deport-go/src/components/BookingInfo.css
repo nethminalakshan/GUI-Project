@@ -1,0 +1,53 @@
+.booking-section {
+    background: linear-gradient(180deg, #FFD700 0%, #FFB600 100%);
+    padding: 100px 20px;
+    text-align: center;
+    position: relative;
+    top:0px;
+    overflow: hidden;
+  }
+  
+  .booking-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 220px;
+    background-image: url('../assets/images/wavy-skyline-gold.svg'); /* Keeping the same file name */
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    opacity: 0.9;
+  }
+  
+  .booking-container {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .booking-title {
+    font-size: 38px;
+    font-weight: bold;
+    color: #4d3900; /* Dark gold for contrast */
+    margin-bottom: 15px;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .booking-subtitle {
+    font-size: 22px;
+    color: #fff8c9;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  
+  .booking-description {
+    font-size: 18px;
+    color: #4d3900;
+    line-height: 1.8;
+    padding: 0 15px;
+    text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.4);
+  }
+  

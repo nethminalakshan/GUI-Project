@@ -1,0 +1,55 @@
+.partners {
+    position: relative;
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 0;
+    text-align: center;
+}
+
+.partners p {
+    font-size: 32px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Rows with Equal Spacing */
+.row1, .row2 {
+    display: flex;
+    justify-content: center; /* Center content instead of stretching */
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 20px 0;
+    gap: 50px;
+}
+
+/* Image Styles */
+.row1 img, .row2 img {
+    height: 100px;
+    filter: grayscale(20%); /* Subtle grayscale effect */
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Specific Adjustments */
+.row1 img:nth-child(2) { /* NCG */
+    height: 70px;
+    position: relative;
+    top: -5px;
+}
+
+.row1 img:nth-child(3) { /* Superline */
+    height: 60px;
+}
+
+/* Hover Effect */
+.row1 img:hover, .row2 img:hover {
+    transform: scale(1.15);
+    filter: grayscale(0%); /* Full color on hover */
+}

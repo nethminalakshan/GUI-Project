@@ -1,0 +1,219 @@
+/* -------------------------
+   Main Layout & Background
+------------------------- */
+.lidis {
+  position: relative;
+  width: 100%;
+  top: 250px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Add animate class for scroll-trigger */
+.lidis.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slider-container {
+  display: flex;
+  align-items: center;
+  margin: 0 50px;
+}
+
+/* -------------------------
+   "Travel To" Styling
+------------------------- */
+.tto {
+  font-size: 80px;
+  font-weight: 700;
+  margin: 0;
+  margin-right: 20px;
+  color: #010101;
+}
+
+/* -------------------------
+   Slider & Slide-Track
+------------------------- */
+.slider {
+  position: relative;
+  overflow: hidden;
+  height: 150px;
+  width: 550px;
+  
+}
+
+.slide-track {
+  animation: slideUp 50s infinite;
+}
+
+/* -------------------------
+   Individual Slide Styling
+------------------------- */
+.slider span {
+  display: block;
+  height: 150px;
+  line-height: 150px;
+  font-size: 80px;
+  color: #F9D452;
+  font-weight: 700;
+  text-align: left;
+  padding-left: 10px;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  transition: color 0.3s ease;
+}
+
+.slider span:hover {
+  color: #FFD700;
+}
+
+/* -------------------------
+   Keyframes for Slides
+------------------------- */
+@keyframes slideUp {
+  0%, 2%    { transform: translateY(0); opacity: 1; }
+  4%, 6%    { transform: translateY(-150px); opacity: 1; }
+  8%, 10%   { transform: translateY(-300px); opacity: 1; }
+  12%, 14%  { transform: translateY(-450px); opacity: 1; }
+  16%, 18%  { transform: translateY(-600px); opacity: 1; }
+  20%, 22%  { transform: translateY(-750px); opacity: 1; }
+  24%, 26%  { transform: translateY(-900px); opacity: 1; }
+  28%, 30%  { transform: translateY(-1050px); opacity: 1; }
+  32%, 34%  { transform: translateY(-1200px); opacity: 1; }
+  36%, 38%  { transform: translateY(-1350px); opacity: 1; }
+  40%, 42%  { transform: translateY(-1500px); opacity: 1; }
+  44%, 46%  { transform: translateY(-1650px); opacity: 1; }
+  48%, 50%  { transform: translateY(-1800px); opacity: 1; }
+  52%, 54%  { transform: translateY(-1950px); opacity: 1; }
+  56%, 58%  { transform: translateY(-2100px); opacity: 1; }
+  60%, 62%  { transform: translateY(-2250px); opacity: 1; }
+  64%, 66%  { transform: translateY(-2400px); opacity: 1; }
+  68%, 70%  { transform: translateY(-2550px); opacity: 1; }
+  72%, 74%  { transform: translateY(-2700px); opacity: 1; }
+  76%, 78%  { transform: translateY(-2850px); opacity: 1; }
+  80%, 82%  { transform: translateY(-3000px); opacity: 1; }
+  84%, 86%  { transform: translateY(-3150px); opacity: 1; }
+  88%, 90%  { transform: translateY(-3300px); opacity: 1; }
+  92%, 94%  { transform: translateY(-3450px); opacity: 1; }
+  96%       { transform: translateY(-3600px); opacity: 1; }
+  98%       { transform: translateY(-3600px); opacity: 0; }
+  100%      { transform: translateY(0); opacity: 0; }
+}
+
+/* -------------------------
+   Images Section & Animation
+------------------------- */
+.images-section {
+  position: relative;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.images-section.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.svgback {
+  position: absolute;
+  width: 100%;
+  height: 860px;
+  left: 0;
+  top: -100px;
+  z-index: -5;
+}
+
+.photo1 {
+  display: inline-block;
+  position: relative;
+  margin-top: -200px;
+  margin-left: 52.5%;
+  width: 650px;
+  height: auto;
+}
+
+.book-now {
+  position: relative;
+  left:50px;
+  top:30px;
+  padding: 15px 40px;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(90deg, #f4bd0c, #ffcc00);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+}
+
+.book-now:hover {
+  background: linear-gradient(90deg, #ffcc00, #ff7b00);
+  transform: scale(1.05);
+}
+
+/* -------------------------
+   Responsive Adjustments
+------------------------- */
+@media (max-width: 992px) {
+  .tto, .slider span {
+    font-size: 60px;
+    line-height: 60px;
+  }
+  .slider {
+    height: 60px;
+    width: 400px;
+  }
+  .lidis {
+    top: 200px;
+  }
+  .photo1 {
+    width: 500px;
+    margin-left: 50%;
+    margin-top: -150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tto, .slider span {
+    font-size: 50px;
+    line-height: 50px;
+  }
+  .slider {
+    height: 50px;
+    width: 350px;
+  }
+  .lidis {
+    top: 180px;
+  }
+  .photo1 {
+    width: 400px;
+    margin-left: 45%;
+    margin-top: -130px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tto, .slider span {
+    font-size: 40px;
+    line-height: 40px;
+  }
+  .slider {
+    height: 40px;
+    width: 300px;
+  }
+  .lidis {
+    top: 150px;
+    padding: 0 10px;
+  }
+  .photo1 {
+    width: 300px;
+    margin-left: 40%;
+    margin-top: -100px;
+  }
+}
