@@ -1,4 +1,5 @@
-
+import express from 'express';
+import mysql from 'mysql';
 
 
 const express = require('express');
@@ -10,13 +11,22 @@ const app=express();
 app.use(cors());
 
 
-const db=mysql.createConnection({
-      host:'bkmxso2suopnpe64tmya-mysql.services.clever-cloud.com',
-      user:'usjalwxjyu4izuby',
-      password:'rGms6qkggzV3SOXuIx4Q',
-      database:'bkmxso2suopnpe64tmya'
+const dbConfig = {
+    host: 'bkmxso2suopnpe64tmya-mysql.services.clever-cloud.com',
+    user: 'usjalwxjyu4izuby',
+    password: 'rGms6qkggzV3SOXuIx4Q',  
+    database: 'bkmxso2suopnpe64tmya',
+}
 
-})
+const connection= mysql.createConnection(dbConfig);
+
+connection.connect((err) => {
+    if(err) {
+        console.log(err);
+    } else {
+        console.log('Connected to database');
+    }
+});
 
     
 app.listen(3001,()=>{

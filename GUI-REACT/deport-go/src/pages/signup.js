@@ -1,46 +1,85 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import axios from 'axios';
+import React, { useState } from "react";
+import "./signup.css"; // Import your CSS file
+import logo from "../assets/images/2.png"; // Import your logo
 
-function Signup() {
-    const [values, setValues] = useState({
-        name: '',
-        phone: '',
-        email: '',
-        password: ''
+const AuthPage = () => {
+    const [isLogin, setIsLogin] = useState(true);
+    const [formData, setFormData] = useState({
+        username: "",
+        email: "",
+        password: ""
     });
 
-    const [message, setMessage] = useState('');
-
-    const handleInput = (event) => {
-        setValues({ ...values, [event.target.name]: event.target.value });
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = async (event) => {
-        event.preventDefault();
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const endpoint = isLogin ? "/login" : "/signup";
         
         try {
-            const response = await axios.post('http://localhost:5000/signup', values);
-            setMessage(response.data.message);
+            const response = await fetch(`http://localhost:5000${endpoint}`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formData)
+            });
+            
+            const data = await response.json();
+            alert(data.message);
         } catch (error) {
-            setMessage('Signup failed. Try again.');
+            console.error("Error:", error);
+            alert("Something went wrong");
         }
     };
 
     return (
         <div>
-            <h2>Sign-up</h2>
-            <form onSubmit={handleSubmit}>
-                <input type="text" name="name" placeholder="Enter Name" onChange={handleInput} required />
-                <input type="email" name="email" placeholder="Enter Email" onChange={handleInput} required />
-                <input type="tel" name="phone" placeholder="Enter Phone" onChange={handleInput} required />
-                <input type="password" name="password" placeholder="Enter Password" onChange={handleInput} required />
-                <button type="submit">Sign up</button>
-                <p>{message}</p>
-                <Link to="/login"><button>Login</button></Link>
-            </form>
+            <img className="logo" src={logo} alt="Logo" />
+            <div className="container">
+                <div className="login-container"> {/* Updated className */}
+                    <h2>{isLogin ? "Login" : "Signup"}</h2>
+                    <form onSubmit={handleSubmit}>
+                        {!isLogin && (
+                            <input
+                                type="text"
+                                name="username"
+                                placeholder="Username"
+                                value={formData.username}
+                                onChange={handleChange}
+                                required
+                            />
+                        )}
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="Email"
+                            value={formData.email}
+                            onChange={handleChange}
+                            required
+                        />
+                        <input
+                            type="password"
+                            name="password"
+                            placeholder="Password"
+                            value={formData.password}
+                            onChange={handleChange}
+                            required
+                        />
+                        <button type="submit">
+                            {isLogin ? "Login" : "Signup"}
+                        </button>
+                    </form>
+                    <p>
+                        {isLogin ? "Don't have an account? " : "Already have an account? "}
+                        <button onClick={() => setIsLogin(!isLogin)}>
+                            {isLogin ? "Signup" : "Login"}
+                        </button>
+                    </p>
+                </div>
+            </div>
         </div>
     );
-}
+};
 
-export default Signup;
+export default AuthPage;

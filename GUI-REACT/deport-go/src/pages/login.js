@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import './login.css';
+import logo from '../assets/images/2.png';
 
 export default function Login() {
-    const [values, setValues] = useState({
-        email: '',
-        password: ''
-    });
-
+    const [values, setValues] = useState({ email: '', password: '' });
     const [message, setMessage] = useState('');
+    const [error, setError] = useState('');
     const navigate = useNavigate();
 
     const handleInput = (event) => {
@@ -17,28 +16,38 @@ export default function Login() {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        
+        setMessage('');
+        setError('');
+
         try {
             const response = await axios.post('http://localhost:5000/login', values);
-            setMessage(response.data.message);
+
             if (response.status === 200) {
-                navigate('/dashboard');  // Redirect to dashboard or home page
+                setMessage('Login successful!');
+                localStorage.setItem('token', response.data.token); // Store token
+                navigate('/'); // Redirect on success
             }
         } catch (error) {
-            setMessage('Invalid credentials. Try again.');
+            setError(error.response?.data?.message || 'Invalid credentials. Try again.');
         }
     };
 
     return (
         <div>
-            <h2>Sign-in</h2>
-            <form onSubmit={handleSubmit}>
-                <input type="email" name="email" placeholder="Enter Email" onChange={handleInput} required />
-                <input type="password" name="password" placeholder="Enter Password" onChange={handleInput} required />
-                <button type="submit">Log in</button>
-                <p>{message}</p>
-                <Link to="/signup">Create Account</Link>
-            </form>
+            <img className="logo" src={logo} alt="Logo" />
+            <div className='login-container'>
+                <h2>Sign-in</h2>
+                <form onSubmit={handleSubmit}>
+                    <input type="email" name="email" placeholder="Enter Email" onChange={handleInput} required />
+                    <input type="password" name="password" placeholder="Enter Password" onChange={handleInput} required />
+                    <button type="submit">Log in</button>
+                    
+                    {message && <p className="success-message">{message}</p>}
+                    {error && <p className="error-message">{error}</p>}
+
+                    <Link to="/signup">Create Account</Link>
+                </form>
+            </div>
         </div>
     );
 }

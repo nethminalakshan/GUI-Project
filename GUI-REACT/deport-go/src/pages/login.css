@@ -1,0 +1,142 @@
+/* Center the logo vertically and horizontally */
+.logo {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-20%, -20%);
+    width: 180px; /* Increased the size */
+    height: auto; /* Maintain aspect ratio */
+    animation: float 5s ease-in-out infinite, rotate 5s linear infinite;
+}
+
+/* Floating Animation */
+@keyframes float {
+    0% {
+        transform: translate(-50%, -50%) translateY(0);
+    }
+    50% {
+        transform: translate(-50%, -50%) translateY(-10px);
+    }
+    100% {
+        transform: translate(-50%, -50%) translateY(0);
+    }
+}
+
+
+
+/* Login Container Styles */
+.login-container {
+    position: relative;
+    margin-top: 60vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    height: 400px;  
+    text-align: center;
+    animation: fadeIn 1s ease-in-out, slideIn 1s ease-in-out;
+}
+
+/* Other Styles (unchanged) */
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px  0px 30px 0px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 400;
+    transition: all 0.3s ease-in-out;
+}
+
+input:focus {
+    border-color: #667eea;
+    outline: none;
+    box-shadow: 0px 0px 15px rgba(102, 126, 234, 0.5);
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background: #000000; /* Red color */
+    border-color: #ffffff;
+    color: white;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #ffffff; /* Darker red on hover */
+    color: rgb(0, 0, 0);
+    border-color: #000000;
+    transform: scale(1.05);
+}
+
+.success-message {
+    color: green;
+    margin-top: 10px;
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+}
+
+a {
+    display: block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #667eea;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #4c51bf;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -80%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* Slide In Animation */
+@keyframes slideIn {
+    from {
+        transform: translate(-50%, -100%);
+    }
+    to {
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .login-container {
+        width: 90%;
+        margin-top: 10vh;
+    }
+
+    .logo {
+        top: 30%;
+    }
+}
