@@ -1,90 +1,85 @@
-/* Import Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
 /* Hero Section */
-.hero-container {
+.hero-section {
   position: relative;
-  width: 100%;
-  height: 100vh; /* Full screen height */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
+  margin-bottom: 40px;
   overflow: hidden;
-  font-family: 'Poppins', sans-serif;
+  border-radius: 10px;
+  animation: fadeIn 2s ease-in-out;
 }
 
 .bg-photo {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
+  height: 400px;
   object-fit: cover;
-  z-index: -1;
+  filter: brightness(0.7);
+  transition: transform 0.5s ease;
 }
 
-/* Dark overlay for better readability */
-.overlay {
+.hero-section:hover .bg-photo {
+  transform: scale(1.1);
+}
+
+.hero-text {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6); /* Dark overlay effect */
-  z-index: 0;
-}
-
-/* About Us Section */
-.about-us-container {
-  max-width: 850px;
-  padding: 35px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  margin: 0;
+  font-weight: bold;
+  animation: slideInDown 1.5s ease-in-out;
+}
+
+.hero-text p {
+  font-size: 24px;
+  margin: 10px 0 0;
+  animation: slideInUp 1.5s ease-in-out;
+}
+
+/* Content Section */
+.content-section {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 2s ease-in-out;
+}
+
+.content-heading {
+  font-size: 36px;
+  font-weight: bold;
+  color: #007bff;
   text-align: center;
-  position: relative;
-  z-index: 1;
-  animation: fadeIn 1.5s ease-in-out;
-}
-
-/* Title Styling */
-.about-us-title {
-  font-size: 3rem;
-  font-weight: 700;
   margin-bottom: 20px;
-  color: #f1c40f;
-  animation: slideIn 1s ease-in-out;
+  animation: fadeIn 2s ease-in-out;
 }
 
-.about-us-title span {
-  background: linear-gradient(45deg, #ff7e5f, #feb47b);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* Content Styling */
-.about-us-content {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 25px;
-  border-radius: 12px;
-  backdrop-filter: blur(10px); /* Frosted glass effect */
-  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+.content-text p {
+  font-size: 18px;
+  margin-bottom: 20px;
   text-align: justify;
-  animation: fadeInUp 1.5s ease-in-out;
-}
-
-.about-us-content p {
-  margin-bottom: 15px;
-  font-size: 1.2rem;
-  line-height: 1.8;
-  color: #f1f1f1;
-  font-weight: 400;
-}
-
-/* Highlight effect */
-.highlight {
-  font-weight: 700;
-  background: linear-gradient(45deg, #ff9a9e, #fad0c4);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  animation: fadeIn 2s ease-in-out;
 }
 
 /* Animations */
@@ -97,39 +92,61 @@
   }
 }
 
-@keyframes slideIn {
+@keyframes fadeInUp {
   from {
-    transform: translateY(-20px);
     opacity: 0;
+    transform: translateY(20px);
   }
   to {
-    transform: translateY(0);
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@keyframes fadeInUp {
+@keyframes slideInDown {
   from {
-    transform: translateY(20px);
     opacity: 0;
+    transform: translateY(-50px);
   }
   to {
-    transform: translateY(0);
     opacity: 1;
+    transform: translateY(0);
   }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover Effects */
+.content-section:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .about-us-container {
-    padding: 20px;
+  .hero-text h1 {
+    font-size: 36px;
   }
 
-  .about-us-title {
-    font-size: 2.5rem;
+  .hero-text p {
+    font-size: 18px;
   }
 
-  .about-us-content p {
-    font-size: 1rem;
+  .content-heading {
+    font-size: 28px;
+  }
+
+  .content-text p {
+    font-size: 16px;
   }
 }

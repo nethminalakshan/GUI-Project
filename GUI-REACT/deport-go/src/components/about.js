@@ -4,32 +4,31 @@ import Bgphoto from "../assets/images/herobg.png";
 
 const AboutUs = () => {
   return (
-    <div className="hero-container">
-      <img className="bg-photo" src={Bgphoto} alt="Background" />
-      <div className="overlay"></div> {/* Dark overlay for contrast */}
-      <div className="about-us-container">
-        <h1 className="about-us-title">About <span>Us</span></h1>
-        <div className="about-us-content">
+    <div className="about-container">
+      {/* Hero Section */}
+      <div className="hero-section">
+        <img className="bg-photo" src={Bgphoto} alt="Background" />
+        <div className="hero-text">
+          <h1>About Us</h1>
+          <p>Your journey, our priority.</p>
+        </div>
+      </div>
+
+      {/* Content Section */}
+      <div className="content-section">
+        <h1 className="content-heading">About Us</h1>
+        <div className="content-text">
           <p>
-            <span className="highlight">Depot-Go</span> is a <b>cutting-edge</b> online bus ticket booking platform
-            designed to <b>revolutionize public transportation</b> in Sri Lanka. Our mission is to provide a 
-            <span className="highlight">seamless</span>, <span className="highlight">efficient</span>, and <span className="highlight">convenient</span> 
-            travel experience for passengers.
+            Depot-Go is a cutting-edge online bus ticket booking platform designed to revolutionize public transportation in Sri Lanka. Our mission is to provide a seamless, efficient, and convenient travel experience for passengers.
           </p>
           <p>
-            The traditional bus ticketing system in Sri Lanka relies on <b>manual processes</b>, leading to 
-            inefficiencies. <span className="highlight">Depot-Go</span> bridges this gap by introducing a 
-            <b>hassle-free digital platform</b> that allows users to <u>book seats, check schedules,</u> 
-            and access travel information—all in just a few clicks.
+            The traditional bus ticketing system in Sri Lanka relies on manual processes, leading to inefficiencies. Depot-Go bridges this gap by introducing a hassle-free digital platform that allows users to book seats, check schedules, and access travel information—all in just a few clicks.
           </p>
           <p>
-            With the <b>rising demand</b> for public transport and tourism, a <span className="highlight">modernized transport system</span> is essential. 
-            <span className="highlight">Depot-Go</span> makes bus travel in Sri Lanka more <b>accessible</b> and <b>reliable</b>.
+            With the rising demand for public transport and tourism, a modernized transport system is essential. Depot-Go makes bus travel in Sri Lanka more accessible and reliable.
           </p>
           <p>
-            <i>At <span className="highlight">Depot-Go</span>, we believe an efficient transport system is the backbone of a country’s progress.</i>  
-            Our platform is committed to <b>transforming Sri Lanka’s public transport</b>, ensuring that 
-            every journey is <span className="highlight">smoother</span>, <span className="highlight">faster</span>, and <span className="highlight">more convenient</span>.
+            At Depot-Go, we believe an efficient transport system is the backbone of a country’s progress. Our platform is committed to transforming Sri Lanka’s public transport, ensuring that every journey is smoother, faster, and more convenient.
           </p>
         </div>
       </div>

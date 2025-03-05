@@ -3,6 +3,7 @@ import Header  from "../components/Header";
 import Footer from "../components/Footer";
 import Buscard from "../components/2-BusCards";
 import SeatSelection from "../components/2-SeatSelection";
+import BusCardContainer from "../components/2-BusCards";
 
 
 export default function Home() {
@@ -11,8 +12,10 @@ export default function Home() {
         
         <div>
             <Header />
+            
             <SeatSelection/>
-            <Buscard/>
+            <BusCardContainer/>
+
             
 
         </div>
