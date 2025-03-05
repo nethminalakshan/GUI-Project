@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './login.css';
 import logo from '../assets/images/2.png';
+import Footer from '../components/Footer';
 
 export default function Login() {
     const [values, setValues] = useState({ email: '', password: '' });
@@ -34,20 +35,21 @@ export default function Login() {
 
     return (
         <div>
-            <img className="logo" src={logo} alt="Logo" />
-            <div className='login-container'>
+            <img className="logo1" src={logo} alt="Logo" />
+            <div className='login-container1'>
                 <h2>Sign-in</h2>
                 <form onSubmit={handleSubmit}>
                     <input type="email" name="email" placeholder="Enter Email" onChange={handleInput} required />
                     <input type="password" name="password" placeholder="Enter Password" onChange={handleInput} required />
                     <button type="submit">Log in</button>
                     
-                    {message && <p className="success-message">{message}</p>}
-                    {error && <p className="error-message">{error}</p>}
+                    {message && <p className="success-message1">{message}</p>}
+                    {error && <p className="error-message1">{error}</p>}
 
                     <Link to="/signup">Create Account</Link>
                 </form>
             </div>
+            <Footer className='foot'/>
         </div>
     );
 }

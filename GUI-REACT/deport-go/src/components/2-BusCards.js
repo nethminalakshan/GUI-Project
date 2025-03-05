@@ -3,7 +3,7 @@ import './2-BusCards.css';
 
 function BusCards() {
   return (
-    <div className="bus-card-container">
+    <div className="bus-card-container1">
       {/* Add bus card elements here */}
     </div>
   );

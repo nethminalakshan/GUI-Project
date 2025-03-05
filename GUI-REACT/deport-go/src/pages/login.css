@@ -1,9 +1,9 @@
 /* Center the logo vertically and horizontally */
-.logo {
+.logo1 {
     position: absolute;
-    top: 20%;
+    top: 15%;
     left: 50%;
-    transform: translate(-20%, -20%);
+    transform: translate(-50%, -50%);
     width: 180px; /* Increased the size */
     height: auto; /* Maintain aspect ratio */
     animation: float 5s ease-in-out infinite, rotate 5s linear infinite;
@@ -22,10 +22,8 @@
     }
 }
 
-
-
 /* Login Container Styles */
-.login-container {
+.login-container1 {
     position: relative;
     margin-top: 60vh;
     top: 50%;
@@ -84,12 +82,12 @@ button:hover {
     transform: scale(1.05);
 }
 
-.success-message {
+.success-message1 {
     color: green;
     margin-top: 10px;
 }
 
-.error-message {
+.error-message1 {
     color: red;
     margin-top: 10px;
 }
@@ -131,12 +129,17 @@ a:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .login-container {
+    .login-container1 {
         width: 90%;
         margin-top: 10vh;
     }
 
-    .logo {
+    .logo1 {
         top: 30%;
     }
+}
+
+.foot {
+    position: relative;
+    top: -800px;
 }

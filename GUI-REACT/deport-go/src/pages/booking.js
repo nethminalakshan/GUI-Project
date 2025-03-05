@@ -1,8 +1,8 @@
 import React from "react";
 import Header  from "../components/Header";
 import Footer from "../components/Footer";
-import AboutUs from "../components/about";
-
+import Buscard from "../components/2-BusCards";
+import SeatSelection from "../components/2-SeatSelection";
 
 
 export default function Home() {
@@ -11,7 +11,8 @@ export default function Home() {
         
         <div>
             <Header />
-            <AboutUs/>
+            <SeatSelection/>
+            <Buscard/>
             
 
         </div>

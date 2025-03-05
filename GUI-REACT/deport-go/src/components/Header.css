@@ -29,7 +29,7 @@
 }
 
 /* Logo Positioning */
-.logo1 {
+.logoh1 {
     width: 100px;
     position: absolute;
     left: 20px;
@@ -68,7 +68,7 @@
 }
 
 /* Sign In Button */
-.signin-btn {
+.sigbtn {
     position: absolute;
     right: 20px;
     top: 50%;
@@ -78,6 +78,7 @@
     border: none;
     border-radius: 4px;
     padding: 10px 20px;
+    width: fit-content;
     font-family: "Poppins", sans-serif;
     font-size: 1rem;
     cursor: pointer;
@@ -86,13 +87,9 @@
     transition: background-color 0.3s ease;
 }
 
-.signin-btn:hover {
-    background-color: #c0392b;
-}
 
-.signin-btn span {
-    margin-left: 8px;
-}
+
+
 
 /* Header appearance when scrolled (transparent effect) */
 body.scrolled .headerbar {

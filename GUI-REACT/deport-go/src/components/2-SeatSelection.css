@@ -1,6 +1,7 @@
-.container {
+.containerseat {
   position: absolute;
-  top:900px;
+  top:200px;
+  left: 100px;
   display: block;
   max-width: 1200px;
   margin: 20px auto;
@@ -30,7 +31,7 @@
 .seats {
 
   position: absolute;
-  left: -300px;
+  left: 300px;
   display: grid;
   grid-template-columns: repeat(6, 50px);
   gap: 10px;
@@ -66,19 +67,28 @@
   pointer-events: none;
 }
 
-.seat.in-progress {
-  background-color: #ffe599;
-}
+
 
 .seat.selected {
-  background-color: #6fa8dc;
+  background-color: #ffe599;
+}
+.total-price {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #333;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
 }
 
 .seat-details {
   position: absolute;
-  left: 250px;
+  left: 700px;
   width: 400px;
   padding: 30px;
+  margin-bottom: 100px;
   border: 1px solid #000000;
   border-radius: 10px;
   background-color: #ffe599;

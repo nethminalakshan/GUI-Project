@@ -70,6 +70,30 @@ app.post('/login', (req, res) => {
     });
 });
 
+
+/////////////////////////////////////////////////////////
+
+
+app.post('/book-seat', (req, res) => {
+    const { passengerName, mobileNumber, email, boardingPlace, destinationPlace, selectedSeats, totalPrice } = req.body;
+
+    if (!passengerName || !mobileNumber || !boardingPlace || !destinationPlace || selectedSeats.length === 0) {
+        return res.status(400).json({ message: "All fields are required, and at least one seat must be selected" });
+    }
+
+    const query = "INSERT INTO bookings (passengerName, mobileNumber, email, boardingPlace, destinationPlace, seats, totalPrice) VALUES (?, ?, ?, ?, ?, ?, ?)";
+    const seats = selectedSeats.join(", "); // Convert array to string
+
+    connection.query(query, [passengerName, mobileNumber, email, boardingPlace, destinationPlace, seats, totalPrice], (err, result) => {
+        if (err) {
+            console.error(err);
+            return res.status(500).json({ message: "Database error" });
+        }
+        res.status(201).json({ message: "Booking successful!" });
+    });
+});
+
+
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });

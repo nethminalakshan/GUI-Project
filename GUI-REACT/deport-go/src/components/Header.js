@@ -21,7 +21,7 @@ export default function Header() {
 
   return (
     <nav className="headerbar" id="id1">
-      <Link to="/"><img className="logo1" src={logo} alt="Logo" /></Link>
+      <Link to="/"><img className="logoh1" src={logo} alt="Logo" /></Link>
       <ul className="nav-links">
         <li>
           <Link to="/">
@@ -48,10 +48,12 @@ export default function Header() {
           </a>
         </li>
       </ul>
-      <button className="signin-btn">
+      <Link to="/login">
+      <button className="sigbtn">
         <FontAwesomeIcon icon={faSignInAlt} />
         <span>Sign In</span>
       </button>
+      </Link>
     </nav>
   );
 }

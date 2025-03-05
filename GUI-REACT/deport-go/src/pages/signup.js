@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./signup.css"; // Import your CSS file
 import logo from "../assets/images/2.png"; // Import your logo
+import Footer from "../components/Footer"; // Import your Footer component  
 
 const AuthPage = () => {
     const [isLogin, setIsLogin] = useState(true);
@@ -27,6 +28,14 @@ const AuthPage = () => {
             
             const data = await response.json();
             alert(data.message);
+            
+            if (response.ok) {
+                if (isLogin) {
+                    window.location.href = "/"; // Redirect to home page after successful login
+                } else {
+                    setIsLogin(true); // Switch to login page after successful signup
+                }
+            }
         } catch (error) {
             console.error("Error:", error);
             alert("Something went wrong");
@@ -35,9 +44,9 @@ const AuthPage = () => {
 
     return (
         <div>
-            <img className="logo" src={logo} alt="Logo" />
-            <div className="container">
-                <div className="login-container"> {/* Updated className */}
+            <img className="logo2" src={logo} alt="Logo" />
+            <div className="container2">
+                <div className="login-container2"> {/* Updated className */}
                     <h2>{isLogin ? "Login" : "Signup"}</h2>
                     <form onSubmit={handleSubmit}>
                         {!isLogin && (
@@ -78,6 +87,7 @@ const AuthPage = () => {
                     </p>
                 </div>
             </div>
+            <Footer className="foot" />
         </div>
     );
 };

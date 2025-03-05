@@ -1,28 +1,32 @@
 /* Center the logo vertically and horizontally */
-.logo {
+.logo2 {
     position: absolute;
     top: 15%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 180px; /* Increased the size */
     height: auto; /* Maintain aspect ratio */
-    animation: float 2s ease-in-out infinite, rotate 5s linear infinite;
+    animation: float 5s ease-in-out infinite, rotate 5s linear infinite;
 }
 
 /* Floating Animation */
 @keyframes float {
-    0%, 100% {
-        transform: translateY(0);
+    0% {
+        transform: translate(-50%, -50%) translateY(0);
     }
     50% {
-        transform: translateY(-5px);
+        transform: translate(-50%, -50%) translateY(-10px);
+    }
+    100% {
+        transform: translate(-50%, -50%) translateY(0);
     }
 }
 
-/* Signup Container Styles */
-.login-container {
-    position: relative; /* Ensures absolute positioning */
-    top: 45%; /* Moves slightly up for better alignment */
+/* Login Container Styles */
+.login-container2 {
+    position: relative;
+    margin-top: 60vh;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background: white;
@@ -35,7 +39,7 @@
     animation: fadeIn 1s ease-in-out, slideIn 1s ease-in-out;
 }
 
-/* Other Styles */
+/* Other Styles (unchanged) */
 h2 {
     color: #333;
     margin-bottom: 20px;
@@ -44,7 +48,7 @@ h2 {
 input {
     width: 100%;
     padding: 12px;
-    margin: 10px 0px 20px 0px; /* Adjusted margin */
+    margin: 10px 0px 30px 0px;
     border: 1px solid #ddd;
     border-radius: 8px;
     font-size: 16px;
@@ -63,7 +67,7 @@ button {
     padding: 12px;
     margin-top: 10px;
     background: #000000; /* Black color */
-    border: 2px solid #ffffff;
+    border-color: #ffffff;
     color: white;
     border-radius: 8px;
     font-size: 18px;
@@ -78,12 +82,12 @@ button:hover {
     transform: scale(1.05);
 }
 
-.success-message {
+.success-message1 {
     color: green;
     margin-top: 10px;
 }
 
-.error-message {
+.error-message1 {
     color: red;
     margin-top: 10px;
 }
@@ -125,12 +129,17 @@ a:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .login-container {
-        top: 50%; /* Adjust to center better */
+    .login-container2 {
         width: 90%;
+        margin-top: 10vh;
     }
 
-    .logo {
-        top: 20%; /* Adjust for better mobile view */
+    .logo2 {
+        top: 30%;
     }
+}
+
+.foot {
+    position: relative;
+    top: -800px;
 }
