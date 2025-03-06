@@ -1,8 +1,7 @@
 import React from "react";
 import Header  from "../components/Header";
 import Footer from "../components/Footer";
-import AboutUs from "../components/about";
-
+import Contact from "../components/contact"
 
 
 export default function Home() {
@@ -11,14 +10,13 @@ export default function Home() {
         
         <div>
             <Header />
-            <AboutUs/>
-            <Footer/>
+            
+            
+            <Contact/>
+
             
 
         </div>
-
-
-
         
 
 
@@ -29,37 +27,3 @@ export default function Home() {
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

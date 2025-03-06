@@ -73,8 +73,9 @@ export default function TravelSlider() {
             </div>
           </div>
         </div>
-        <button className="book-now">Book Now</button>
+        
       </div>
+      <button className="book-now">Book Now</button>
       
 
       {/* Images Section */}

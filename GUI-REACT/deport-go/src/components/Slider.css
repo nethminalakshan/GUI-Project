@@ -124,7 +124,7 @@
   height: 860px;
   left: 0;
   top: -100px;
-  z-index: -5;
+  
 }
 
 .photo1 {
@@ -136,21 +136,7 @@
   height: auto;
 }
 
-.book-now {
-  position: relative;
-  left:50px;
-  top:30px;
-  padding: 15px 40px;
-  font-size: 24px;
-  font-weight: bold;
-  color: white;
-  background: linear-gradient(90deg, #f4bd0c, #ffcc00);
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  transition: 0.3s;
-}
+
 
 .book-now:hover {
   background: linear-gradient(90deg, #ffcc00, #ff7b00);
